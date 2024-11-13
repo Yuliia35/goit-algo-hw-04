@@ -22,6 +22,13 @@ def show_phone(args, contacts):
         return f"Phone number for {name}: {contacts[name]}"
     return 'Contact not found.'
 
+def show_all(contacts):
+    if contacts:
+        for name, phone in contacts.items():
+            return f"{name}: {phone}"
+    else:
+        return "No contacts found."
+        
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")

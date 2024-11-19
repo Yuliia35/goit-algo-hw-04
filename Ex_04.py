@@ -28,6 +28,13 @@ def show_all(contacts):
             return f"{name}: {phone}"
     else:
         return "No contacts found."
+
+def show_all(contacts):
+    if contacts:
+        for name, phone in contacts.items():
+            return "\n".join([f"{name}: {phone}" for name, phone in contacts.items()])
+    else:
+        return "No contacts found."
         
 def main():
     contacts = {}
